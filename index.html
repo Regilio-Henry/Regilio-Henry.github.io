@@ -1,4 +1,47 @@
 <!DOCTYPE html>
-<html>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7l9fnZMXboc?autoplay=1&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Tomato - Fullscreen Video</title>
+    <style>
+        /* Basic CSS Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrolling if the iframe is larger than the viewport */
+            height: 100%; /* Ensure body and html take full height */
+            background-color: #000; /* Black background for a seamless full-screen experience */
+        }
+
+        /* Styles for the video container to make it fullscreen */
+        .video-container {
+            position: fixed; /* Position relative to the viewport */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+
+        /* Styles for the iframe to fill its container */
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* Remove default iframe border */
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/7l9fnZMXboc?autoplay=1&mute=1&controls=0&loop=1&playlist=7l9fnZMXboc&modestbranding=1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+        ></iframe>
+    </div>
+</body>
 </html>
