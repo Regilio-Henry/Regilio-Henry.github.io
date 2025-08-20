@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fullscreen Image</title>
+    <title>Fullscreen MP4 Video</title>
     <style>
         /* Basic CSS Reset */
         body, html {
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Prevent scrolling if the image is larger than the viewport */
+            overflow: hidden; /* Prevent scrolling if the video is larger than the viewport */
             height: 100%; /* Ensure body and html take full height */
             background-color: #000; /* Black background for a seamless full-screen experience */
         }
 
-        /* Styles for the image container to make it fullscreen */
-        .image-container {
+        /* Styles for the video container to make it fullscreen */
+        .video-container {
             position: fixed; /* Position relative to the viewport */
             top: 0;
             left: 0;
@@ -26,20 +26,23 @@
             align-items: center; /* Center vertically */
         }
 
-        /* Styles for the image to fill its container while maintaining aspect ratio */
-        .image-container img {
+        /* Styles for the video to fill its container while maintaining aspect ratio */
+        .video-container video {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Ensures the image fits within the container while maintaining its aspect ratio */
-            /* Use 'cover' instead of 'contain' if you want the image to fill the entire screen, potentially cropping parts */
+            object-fit: contain; /* Ensures the video fits within the container while maintaining its aspect ratio */
+            /* Use 'cover' instead of 'contain' if you want the video to fill the entire screen, potentially cropping parts */
             /* object-fit: cover; */
         }
     </style>
 </head>
 <body>
-    <div class="image-container">
-        <!-- The image file you provided. Make sure this file is in the same directory as your index.html -->
-        <img src="image_2025-08-20_023501906.png" alt="Fullscreen Image">
+    <div class="video-container">
+        <!-- The video file you provided. Make sure this file is in the same directory as your index.html -->
+        <video autoplay loop muted playsinline>
+            <source src="videoplayback.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 </body>
 </html>
